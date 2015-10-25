@@ -25,10 +25,9 @@ add_theme_support( 'genesis-accessibility', array( 'headings', 'drop-down-menu',
 add_theme_support( 'genesis-responsive-viewport' );
 
 //* Add support for custom background
-add_theme_support( 'custom-background' );
-
-//* Add support for 3-column footer widgets
-add_theme_support( 'genesis-footer-widgets', 3 );
+add_theme_support( 'custom-background', array(
+		'default-image'	=>	get_stylesheet_directory_uri().'/images/body.jpg'											  
+	));
 
 //* Disable layouts
 genesis_unregister_layout( 'content-sidebar-sidebar' );
@@ -37,3 +36,4 @@ genesis_unregister_layout( 'sidebar-content-sidebar' );
 genesis_unregister_layout( 'full-width-content' );
 genesis_unregister_layout( 'content-sidebar' );
 add_filter( 'genesis_pre_get_option_site_layout', '__genesis_return_sidebar_content' );
+
