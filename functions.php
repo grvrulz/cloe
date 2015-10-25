@@ -2,6 +2,9 @@
 //* Start the engine
 include_once( get_template_directory() . '/lib/init.php' );
 
+//* Include dashicons post formats lib
+include_once( get_stylesheet_directory() . '/inc/post-formats.php' );
+
 //* Child theme (do not remove)
 define( 'CHILD_THEME_NAME', 'Cloe' );
 define( 'CHILD_THEME_URL', 'http://magikpress.com/' );
@@ -31,6 +34,22 @@ add_theme_support( 'genesis-responsive-viewport' );
 add_theme_support( 'custom-background', array(
 		'default-image'	=>	get_stylesheet_directory_uri().'/images/body.jpg'											  
 	));
+
+//* Add support for post formats
+add_theme_support( 'post-formats', array(
+	'aside',
+	'audio',
+	'chat',
+	'gallery',
+	'image',
+	'link',
+	'quote',
+	'status',
+	'video'
+) );
+
+//* Add support for post format images
+add_theme_support( 'genesis-post-format-dashicons' );
 
 //* Disable layouts
 genesis_unregister_layout( 'content-sidebar-sidebar' );
