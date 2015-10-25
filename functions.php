@@ -32,7 +32,9 @@ add_theme_support( 'genesis-responsive-viewport' );
 
 //* Add support for custom background
 add_theme_support( 'custom-background', array(
-		'default-image'	=>	get_stylesheet_directory_uri().'/images/body.jpg'											  
+		'default-image'	=>	get_stylesheet_directory_uri().'/images/body.jpg',
+		'default-repeat'         => 'no-repeat',
+		'default-attachment'     => 'fixed',
 	));
 
 //* Add support for post formats
