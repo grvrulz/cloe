@@ -3,9 +3,9 @@
 include_once( get_template_directory() . '/lib/init.php' );
 
 //* Child theme (do not remove)
-define( 'CHILD_THEME_NAME', 'Genesis Sample Theme' );
-define( 'CHILD_THEME_URL', 'http://www.studiopress.com/' );
-define( 'CHILD_THEME_VERSION', '2.2.2' );
+define( 'CHILD_THEME_NAME', 'Cloe' );
+define( 'CHILD_THEME_URL', 'http://magikpress.com/' );
+define( 'CHILD_THEME_VERSION', '1.0.0' );
 
 //* Enqueue Google Fonts
 add_action( 'wp_enqueue_scripts', 'genesis_sample_google_fonts' );
@@ -29,3 +29,11 @@ add_theme_support( 'custom-background' );
 
 //* Add support for 3-column footer widgets
 add_theme_support( 'genesis-footer-widgets', 3 );
+
+//* Disable layouts
+genesis_unregister_layout( 'content-sidebar-sidebar' );
+genesis_unregister_layout( 'sidebar-sidebar-content' );
+genesis_unregister_layout( 'sidebar-content-sidebar' );
+genesis_unregister_layout( 'full-width-content' );
+genesis_unregister_layout( 'content-sidebar' );
+add_filter( 'genesis_pre_get_option_site_layout', '__genesis_return_sidebar_content' );
