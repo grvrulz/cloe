@@ -149,7 +149,7 @@ body > div {
 body {
 	background-color: #f5f5f5;
 	color: #333;
-	font-family: Lato, sans-serif;
+	font-family: 'Source Sans Pro', sans-serif;
 	font-size: 18px;
 	font-size: 1.8rem;
 	font-weight: 300;
@@ -940,8 +940,8 @@ img.alignright,
 
 .title-area {
 	float: left;
-	padding: 10px 0;
-	width: 360px;
+	padding: 10px 0 10px 40px;
+	width: 300px;
 }
 
 .header-full-width .title-area {
@@ -951,14 +951,14 @@ img.alignright,
 .site-title {
 	font-size: 32px;
 	font-size: 3.2rem;
-	font-weight: 400;
+	font-weight: 300;
 	line-height: 1.2;
 }
 
 .site-title a,
 .site-title a:hover,
 .site-title a:focus {
-	color: #333;
+	color: #fff;
 }
 
 .header-image .site-title > a {
@@ -973,6 +973,7 @@ img.alignright,
 	font-size: 1.6rem;
 	font-weight: 300;
 	line-height: 1.5;
+	color: #fff;
 }
 
 .site-description,
@@ -1013,7 +1014,7 @@ img.alignright,
 }
 
 .genesis-nav-menu a {
-	color: #333;
+	color: #fff	;
 	text-decoration: none;
 	display: block;
 	padding: 30px 24px;
