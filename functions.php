@@ -32,8 +32,8 @@ add_theme_support( 'genesis-responsive-viewport' );
 
 //* Add support for custom background
 add_theme_support( 'custom-background', array(
-		'default-image'	=>	get_stylesheet_directory_uri().'/images/body.jpg',
-		'default-repeat'         => 'no-repeat',
+		'default-image'	=>	get_stylesheet_directory_uri().'/images/noise-diagonal.png',
+		'default-repeat'         => 'repeat',
 		'default-attachment'     => 'fixed',
 	));
 
@@ -68,3 +68,6 @@ function sp_post_info_filter($post_info) {
 	return $post_info;
 }
 
+//* Reposition the primary navigation menu
+remove_action( 'genesis_after_header', 'genesis_do_nav' );
+add_action( 'genesis_before_header', 'genesis_do_nav' );

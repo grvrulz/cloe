@@ -537,10 +537,11 @@ th {
 /* ## Site Containers
 --------------------------------------------- */
 
-.site-inner,
-.wrap {
-	margin: 0 ;
-	max-width: 1200px;
+.site-container {
+	margin: 0 auto;
+	max-width: 900px;
+	background: #fffcfd;
+	padding: 0 6%;
 }
 
 .site-inner {
@@ -551,68 +552,12 @@ th {
 /* ## Column Widths and Positions
 --------------------------------------------- */
 
-/* ### Wrapping div for .content and .sidebar-primary */
-
-.content-sidebar-sidebar .content-sidebar-wrap,
-.sidebar-content-sidebar .content-sidebar-wrap,
-.sidebar-sidebar-content .content-sidebar-wrap {
-	width: 980px;
-}
-
-.content-sidebar-sidebar .content-sidebar-wrap {
-	float: left;
-}
-
-.sidebar-content-sidebar .content-sidebar-wrap,
-.sidebar-sidebar-content .content-sidebar-wrap {
-	float: right;
-}
-
 /* ### Content */
-
-.content {
-	float: right;
-	width: 800px;
-}
-
-.content-sidebar .content,
-.content-sidebar-sidebar .content,
-.sidebar-content-sidebar .content {
-	float: left;
-}
-
-.content-sidebar-sidebar .content,
-.sidebar-content-sidebar .content,
-.sidebar-sidebar-content .content {
-	width: 580px;
-}
 
 .full-width-content .content {
 	width: 100%;
 }
 
-/* ### Primary Sidebar */
-
-.sidebar-primary {
-	float: right;
-	width: 380px;
-}
-
-.sidebar-content .sidebar-primary,
-.sidebar-sidebar-content .sidebar-primary {
-	float: left;
-}
-
-/* ### Secondary Sidebar */
-
-.sidebar-secondary {
-	float: left;
-	width: 180px;
-}
-
-.content-sidebar-sidebar .sidebar-secondary {
-	float: right;
-}
 
 /* ## Column Classes
 --------------------------------------------- */
@@ -1176,6 +1121,11 @@ img.alignright,
 
 .nav-primary {
 	background-color: #333;
+	text-align: center;
+}
+
+.nav-primary ul {
+	text-align: center;
 }
 
 .nav-primary .genesis-nav-menu a {
@@ -1216,11 +1166,13 @@ img.alignright,
 
 .entry {
 	margin-bottom: 40px;
-	padding: 50px 60px;
+	padding: 5% 8%;
+	border-top: 3px solid #cccccc;
+	position: relative;
 }
 
 .content .entry {
-	background-color: #fff;
+	background-color: #ededed;
 }
 
 .entry-content ol,
@@ -1247,6 +1199,27 @@ img.alignright,
 	color: #ddd;
 }
 
+/* ## Post formats
+--------------------------------------------- */
+.entry .post-format-icon {
+	text-align: center;
+	text-decoration: none;
+	display: block;
+	width: 100%;
+	position: absolute;
+	top: -16px;
+	left: 0;
+}
+
+.entry .post-format-icon .dashicons::before {
+	font-size: 28px;
+	padding: 10px;
+	border: 4px solid #cccccc;
+	border-radius: 50%;
+	background: #fff;
+	color: #ccc;
+}
+
 /* ## Entry Meta
 --------------------------------------------- */
 
@@ -1261,7 +1234,6 @@ p.entry-meta {
 }
 
 .entry-footer .entry-meta {
-	border-top: 2px solid #f5f5f5;
 	padding-top: 24px;
 }
 
