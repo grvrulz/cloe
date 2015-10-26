@@ -220,18 +220,22 @@ i {
 }
 
 blockquote {
-	margin: 40px;
+	margin: 30px 0 20px 40px;
+	font-family: 'Playfair Dsiplay';
+	font-style: italic;
+	font-size: larger;
 }
 
 blockquote::before {
-	content: "\201C";
+	font: normal 30px/1 'dashicons';
+	content: "\f205";
 	display: block;
-	font-size: 30px;
-	font-size: 3rem;
+	font-size: 42px;
+	font-size: 4.2rem;
 	height: 0;
-	left: -20px;
+	left: -50px;
 	position: relative;
-	top: -10px;
+	top: 0px;
 }
 
 
@@ -936,6 +940,7 @@ img.alignright,
 
 .title-area {
 	padding: 10px 0;
+	font-family: 'Playfair Display', serif;
 }
 
 .header-full-width .title-area {
@@ -956,8 +961,6 @@ img.alignright,
 }
 
 .header-image .site-title > a {
-	background: url(images/logo.png) no-repeat left;
-	float: left;
 	min-height: 60px;
 	width: 100%;
 }
@@ -1249,60 +1252,27 @@ p.entry-meta {
 	display: block;
 }
 
-.entry-categories a {
-	
-}
-
-.entry-tags a {
+.entry-categories::before,
+.entry-tags::before,
+.entry-comments-link::before {
 	display: inline-block;
-    height: 24px;
-    line-height: 24px;
-    position: relative;
-    margin: 0 16px 8px 0;
-    padding: 0 10px 0 12px;
-    background: #777;    
-    border-bottom-right-radius: 3px;
-    border-top-right-radius: 3px;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
-    color: #fff;
-    font-size: 12px;
-    text-decoration: none;
-    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
-    font-weight: bold;
+	font: normal 18px/1 'dashicons';
+	margin-right: 5px;
+	margin-top: 4px;
+	vertical-align: top;
+	-webkit-font-smoothing: antialiased;
 }
 
-.entry-tags a:before {
-	content: "";
-    position: absolute;
-    top:0;
-    left: -12px;
-    width: 0;
-    height: 0;
-    border-color: transparent #777 transparent transparent;
-    border-style: solid;
-    border-width: 12px 12px 12px 0;        
+.entry-categories::before {
+	content: "\f318";
 }
 
-.entry-tags a:after {
-    content: "";
-    position: absolute;
-    top: 10px;
-    left: 1px;
-    float: left;
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-    background: #fff;
-    box-shadow: -1px -1px 2px rgba(0,0,0,0.4);
+.entry-tags::before {
+	content: "\f323";
 }
 
-.entry-tags a:hover {
-	background: #999;
-	color: #fff;
-}
-
-.entry-tags a:hover:before{
-	border-color: transparent #999 transparent transparent;
+.entry-comments-link::before {
+	content: "\f101";
 }
 
 .entry-header {
@@ -1332,8 +1302,8 @@ p.entry-meta {
 }
 
 .archive-pagination li a {
-	background-color: #333;
-	color: #fff;
+	background-color: #f1f1f1;
+	color: #333;
 	cursor: pointer;
 	display: inline-block;
 	font-size: 16px;
@@ -1346,6 +1316,7 @@ p.entry-meta {
 .archive-pagination li a:focus,
 .archive-pagination .active a {
 	background-color: #c3251d;
+	color: #fff;
 	text-decoration: underline;
 }
 
@@ -1747,7 +1718,7 @@ li.comment {
 
 	blockquote,
 	pre {
-		border: 1px solid #999;
+		border: 1px solid #ccc;
 		page-break-inside: avoid;
 	}
 
