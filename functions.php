@@ -64,8 +64,15 @@ add_filter( 'genesis_pre_get_option_site_layout', '__genesis_return_full_width_c
 //* Customize the entry meta in the entry header (requires HTML5 theme support)
 add_filter( 'genesis_post_info', 'sp_post_info_filter' );
 function sp_post_info_filter($post_info) {
-	$post_info = '[post_date] [post_author_posts_link] [post_comments] [post_edit]';
+	$post_info = '[post_date] [post_author_posts_link]';
 	return $post_info;
+}
+
+//* Customize the entry meta in the entry footer (requires HTML5 theme support)
+add_filter( 'genesis_post_meta', 'cloe_post_meta_filter' );
+function cloe_post_meta_filter($post_meta) {
+	$post_meta = '[post_categories before=""] [post_tags before=""]';
+	return $post_meta;
 }
 
 //* Reposition the primary navigation menu
