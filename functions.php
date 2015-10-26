@@ -57,7 +57,14 @@ add_theme_support( 'genesis-post-format-dashicons' );
 genesis_unregister_layout( 'content-sidebar-sidebar' );
 genesis_unregister_layout( 'sidebar-sidebar-content' );
 genesis_unregister_layout( 'sidebar-content-sidebar' );
-genesis_unregister_layout( 'full-width-content' );
+genesis_unregister_layout( 'sidebar-content' );
 genesis_unregister_layout( 'content-sidebar' );
-add_filter( 'genesis_pre_get_option_site_layout', '__genesis_return_sidebar_content' );
+add_filter( 'genesis_pre_get_option_site_layout', '__genesis_return_full_width_content' );
+
+//* Customize the entry meta in the entry header (requires HTML5 theme support)
+add_filter( 'genesis_post_info', 'sp_post_info_filter' );
+function sp_post_info_filter($post_info) {
+	$post_info = '[post_date] [post_author_posts_link] [post_comments] [post_edit]';
+	return $post_info;
+}
 
