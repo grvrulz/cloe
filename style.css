@@ -1326,8 +1326,10 @@ p.entry-meta {
 .comment-respond,
 .entry-comments,
 .entry-pings {
-	background-color: #fff;
+	background-color: #f1f1f1;
 	margin-bottom: 40px;
+	border-top: 2px solid #ccc;
+	border-bottom: 2px solid #ddd;
 }
 
 .comment-respond,
@@ -1337,6 +1339,10 @@ p.entry-meta {
 
 .entry-comments {
 	padding: 40px;
+}
+
+.entry-comments >h3 {
+	text-align: center;
 }
 
 .comment-header {
