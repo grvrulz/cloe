@@ -24,7 +24,7 @@ function cloe_do_post_format_image() {
 	$post_format = get_post_format();
 
 	//* If post format is set, look for post format image
-	if ( $post_format && file_exists( sprintf( '%s/images/post-formats/%s.png', CHILD_DIR, $post_format ) ) )
+	if ( $post_format )
 		printf( '<a href="%s" rel="bookmark" class="post-format-icon"><span class="dashicons dashicons-format-%s"></span><span class="screen-reader-text">%s icon</span></a>', get_permalink(), $post_format, $post_format );
 
 	//* Else, look for the default post format image
