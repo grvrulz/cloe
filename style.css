@@ -542,6 +542,7 @@ th {
 --------------------------------------------- */
 
 .site-container {
+    padding-top: 60px;
 	margin: 0 auto;
 	max-width: 900px;
 	background: #fffcfd;
@@ -1121,6 +1122,10 @@ img.alignright,
 	background-color: #fff;
 	text-align: center;
 	border-bottom: 1px solid #ccc;
+    position: sticky;
+    z-index: 999;
+    box-shadow: 0 0 10px rgba(255,255,255,0.8),
+                0 5px 18px rgba(255,255,255,0.6);
 }
 
 .nav-primary ul {
