@@ -1122,10 +1122,6 @@ img.alignright,
 	background-color: #fff;
 	text-align: center;
 	border-bottom: 1px solid #ccc;
-    position: sticky;
-    z-index: 999;
-    box-shadow: 0 0 10px rgba(255,255,255,0.8),
-                0 5px 18px rgba(255,255,255,0.6);
 }
 
 .nav-primary ul {
@@ -1523,8 +1519,7 @@ li.comment {
 		width: 740px;
 	}
 
-	.content,
-	.site-header .widget-area {
+	.content {
 		width: 620px;
 	}
 
@@ -1534,22 +1529,21 @@ li.comment {
 		width: 400px;
 	}
 
-	.sidebar-primary,
-	.title-area {
+	.sidebar-primary, {
 		width: 300px;
 	}
 
 	.footer-widgets-1,
 	.footer-widgets-2,
 	.footer-widgets-3,
-	.sidebar-primary,
-	.title-area {
+	.sidebar-primary {
 		width: 300px;
 	}
 
 	.footer-widgets-1 {
 		margin-right: 30px;
 	}
+
 
 }
 
