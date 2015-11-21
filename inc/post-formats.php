@@ -12,7 +12,7 @@ add_action( 'genesis_entry_header', 'cloe_do_post_format_image', 4 );
  * @uses CHILD_DIR
  * @uses CHILD_URL
  *
- * @return null Return early if post formats are not supported, or `genesis-post-format-images` is not supported
+ * @return null Return early if post formats are not supported, or `genesis-post-format-dashicons` is not supported
  */
 function cloe_do_post_format_image() {
 

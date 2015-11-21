@@ -42,10 +42,8 @@ add_theme_support( 'custom-background', array(
 add_theme_support( 'post-formats', array(
 	'aside',
 	'audio',
-	'chat',
 	'gallery',
 	'image',
-	'link',
 	'quote',
 	'status',
 	'video'
